@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="MaterialPreference">
-        <attr name="pref_title_color" format="color"/>
-        <attr name="pref_title_size" format="dimension"/>
-        <attr name="pref_summary_color" format="color"/>
-        <attr name="pref_summary_size" format="dimension"/>
-        <attr name="pref_background" format="color"/>
-        <attr name="pref_padding_left" format="dimension"/>
-        <attr name="pref_padding_top" format="dimension"/>
-        <attr name="pref_padding_right" format="dimension"/>
-        <attr name="pref_padding_bottom" format="dimension"/>
-    </declare-styleable>
-
     <declare-styleable name="MaterialPreferenceCategory">
         <attr name="pref_category_title_color" format="color"/>
         <attr name="pref_category_title_size" format="dimension"/>
@@ -21,12 +9,26 @@
         <attr name="pref_category_padding_right" format="dimension"/>
         <attr name="pref_category_padding_bottom" format="dimension"/>
     </declare-styleable>
-
+    <declare-styleable name="MaterialPreference">
+        <attr name="pref_title_color" format="color"/>
+        <attr name="pref_title_size" format="dimension"/>
+        <attr name="pref_title_background" format="color"/>
+        <attr name="pref_summary_color" format="color"/>
+        <attr name="pref_summary_size" format="dimension"/>
+        <attr name="pref_summary_background" format="color"/>
+        <attr name="pref_background" format="color"/>
+        <attr name="pref_padding_left" format="dimension"/>
+        <attr name="pref_padding_top" format="dimension"/>
+        <attr name="pref_padding_right" format="dimension"/>
+        <attr name="pref_padding_bottom" format="dimension"/>
+    </declare-styleable>
     <declare-styleable name="MaterialSwitchPreference">
         <attr name="pref_switch_title_color" format="color"/>
         <attr name="pref_switch_title_size" format="dimension"/>
+        <attr name="pref_switch_title_background" format="color"/>
         <attr name="pref_switch_summary_color" format="color"/>
         <attr name="pref_switch_summary_size" format="dimension"/>
+        <attr name="pref_switch_summary_background" format="color"/>
         <attr name="pref_switch_background" format="color"/>
         <attr name="pref_switch_padding_left" format="dimension"/>
         <attr name="pref_switch_padding_top" format="dimension"/>

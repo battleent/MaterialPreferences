@@ -49,9 +49,9 @@ class MaterialPreference : Preference {
     private var summarySize: Float = 14f
 
     private var padding_left: Float = 16f
-    private var padding_top: Float = 13f
+    private var padding_top: Float = 10f
     private var padding_right: Float = 0f
-    private var padding_bottom: Float = 13f
+    private var padding_bottom: Float = 10f
 
     private var background: Int = Color.WHITE
 
@@ -110,13 +110,13 @@ class MaterialPreference : Preference {
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, titleSize)
 
         summary = view.findViewById(android.R.id.summary)
-        summary.setPadding(0, getDp(6), 0, getDp(6))
+        summary.setPadding(0, getDp(6), 0, getDp(7))
         summary.setTextColor(summaryColor)
         summary.setTextSize(TypedValue.COMPLEX_UNIT_SP, summarySize)
 
         parent = title.parent as RelativeLayout
         parent.setBackgroundColor(background)
-        parent.setPadding(padding_left.toInt(), padding_top.toInt(), padding_right.toInt(), 0)
+        parent.setPadding(padding_left.toInt(), padding_top.toInt(), padding_right.toInt(), padding_bottom.toInt())
     }
 
     private fun getDp(size: Int): Int {

@@ -1,16 +1,15 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <com.battleent.materialpreferences.MaterialPreferenceCategory
+        android:title="Notification"
+        app:pref_category_background="@color/white_three"/>
+
     <com.battleent.materialpreferences.MaterialPreference
         android:defaultValue="true"
         android:key="Notification"
         android:title="알림 사용"
-        android:summary="이 항목은 알림 사용을 허가합니다."/>
-
-    <com.battleent.materialpreferences.MaterialPreferenceCategory
-        android:defaultValue="true"
-        android:key="Notification22"
-        android:title="알림 사용2" />
+        android:summary="이 항목은 알림 사용을 허가합니다." />
 
     <com.battleent.materialpreferences.MaterialSwitchPreference
         android:defaultValue="true"

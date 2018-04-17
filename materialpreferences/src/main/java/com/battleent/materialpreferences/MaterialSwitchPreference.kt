@@ -54,9 +54,9 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
     private var summarySize: Float = 14f
 
     private var padding_left: Float = 16f
-    private var padding_top: Float = 13f
+    private var padding_top: Float = 10f
     private var padding_right: Float = 0f
-    private var padding_bottom: Float = 13f
+    private var padding_bottom: Float = 10f
 
     private var track_checked_color = Color.WHITE
     private var track_unchecked_color = Color.WHITE
@@ -166,7 +166,7 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
 
         summary = view.findViewById(android.R.id.summary)
-        summary.setPadding(0, getDp(6), 0, 0)
+        summary.setPadding(0, getDp(6), 0, getDp(7))
         summary.setTextColor(ContextCompat.getColor(context, R.color.black_three_54))
         summary.setTextSize(TypedValue.COMPLEX_UNIT_SP, summarySize)
 

@@ -46,9 +46,9 @@ class MaterialPreferenceCategory : PreferenceCategory {
     private var titleSize: Float = 16f
 
     private var padding_left: Float = 16f
-    private var padding_top: Float = 13f
+    private var padding_top: Float = 10f
     private var padding_right: Float = 0f
-    private var padding_bottom: Float = 13f
+    private var padding_bottom: Float = 10f
 
     private var background: Int = Color.WHITE
 
@@ -78,7 +78,6 @@ class MaterialPreferenceCategory : PreferenceCategory {
 
     private fun onCreate() {
         this.titleColor = ContextCompat.getColor(context, R.color.black_87)
-        this.background = ContextCompat.getColor(context, R.color.white_two)
     }
 
     private fun setTypeArray(typeArray: TypedArray) {
@@ -97,8 +96,8 @@ class MaterialPreferenceCategory : PreferenceCategory {
 
     override fun onBindView(view: View) {
         super.onBindView(view)
-        title = view.findViewById<TextView>(android.R.id.title)
-        title.setPadding(padding_left.toInt(), padding_top.toInt(), padding_right.toInt(), 0)
+        title = view.findViewById(android.R.id.title)
+        title.setPadding(padding_left.toInt(), padding_top.toInt(), padding_right.toInt(), padding_bottom.toInt())
         title.setTextColor(titleColor)
         title.setBackgroundColor(background)
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, titleSize)
