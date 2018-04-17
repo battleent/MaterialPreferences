@@ -67,7 +67,7 @@ class MaterialPreferenceCategory : PreferenceCategory {
     }
 
     private fun getAttrs(attrs: AttributeSet) {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.MaterialPreference)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.MaterialPreferenceCategory)
         setTypeArray(typedArray)
     }
 
@@ -113,4 +113,8 @@ class MaterialPreferenceCategory : PreferenceCategory {
         val scale = context.resources.displayMetrics.density
         return (size * scale + 0.5f).toInt()
     }
+
+    fun getTitleView() = this.title
+
+    fun getParentView() = this.parent
 }

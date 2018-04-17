@@ -21,4 +21,21 @@
         <attr name="pref_category_padding_right" format="dimension"/>
         <attr name="pref_category_padding_bottom" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="MaterialSwitchPreference">
+        <attr name="pref_switch_title_color" format="color"/>
+        <attr name="pref_switch_title_size" format="dimension"/>
+        <attr name="pref_switch_summary_color" format="color"/>
+        <attr name="pref_switch_summary_size" format="dimension"/>
+        <attr name="pref_switch_background" format="color"/>
+        <attr name="pref_switch_padding_left" format="dimension"/>
+        <attr name="pref_switch_padding_top" format="dimension"/>
+        <attr name="pref_switch_padding_right" format="dimension"/>
+        <attr name="pref_switch_padding_bottom" format="dimension"/>
+        <attr name="pref_switch_width" format="dimension"/>
+        <attr name="pref_switch_checked_track_color" format="color"/>
+        <attr name="pref_switch_checked_thumb_color" format="color"/>
+        <attr name="pref_switch_unchecked_thumb_color" format="color"/>
+        <attr name="pref_switch_unchecked_track_color" format="color"/>
+    </declare-styleable>
 </resources>

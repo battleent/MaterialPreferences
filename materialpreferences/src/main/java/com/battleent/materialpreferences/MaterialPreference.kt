@@ -109,7 +109,7 @@ class MaterialPreference : Preference {
         title.setTextColor(titleColor)
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, titleSize)
 
-        summary = view.findViewById<TextView>(android.R.id.summary)
+        summary = view.findViewById(android.R.id.summary)
         summary.setPadding(0, getDp(6), 0, getDp(6))
         summary.setTextColor(summaryColor)
         summary.setTextSize(TypedValue.COMPLEX_UNIT_SP, summarySize)

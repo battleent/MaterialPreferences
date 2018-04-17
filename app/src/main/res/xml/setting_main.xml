@@ -5,12 +5,21 @@
         android:defaultValue="true"
         android:key="Notification"
         android:title="알림 사용"
-        android:summary="이 항목은 알림 사용을 허가합니다."
-        app:pref_padding_left="36dp" />
+        android:summary="이 항목은 알림 사용을 허가합니다."/>
 
     <com.battleent.materialpreferences.MaterialPreferenceCategory
         android:defaultValue="true"
-        android:key="Notification"
+        android:key="Notification22"
         android:title="알림 사용2" />
+
+    <com.battleent.materialpreferences.MaterialSwitchPreference
+        android:defaultValue="true"
+        android:title="qwdqwdwd"
+        android:summary="sdsdsd"
+        android:key="asdsd"
+        app:pref_switch_checked_thumb_color="@android:color/holo_blue_dark"
+        app:pref_switch_checked_track_color="@android:color/holo_blue_light"
+        app:pref_switch_unchecked_thumb_color="@android:color/holo_green_dark"
+        app:pref_switch_unchecked_track_color="@android:color/holo_green_light"/>
 
 </PreferenceScreen>
