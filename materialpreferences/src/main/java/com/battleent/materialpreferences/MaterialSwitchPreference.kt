@@ -143,6 +143,7 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
     override fun onBindView(view: View) {
         super.onBindView(view)
         val customSwitch = view.findViewById<View>(R.id.custom_switch_item)
+        view.setBackgroundColor(background)
 
         customSwitch?.let {
             (it as Checkable).isChecked = isChecked
@@ -162,12 +163,12 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
         view.setPadding(0, 0, 0, 0)
         title = view.findViewById(android.R.id.title)
         title.setPadding(0, 0, 0, 0)
-        title.setTextColor(ContextCompat.getColor(context, R.color.black_87))
-        title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
+        title.setTextColor(titleColor)
+        title.setTextSize(TypedValue.COMPLEX_UNIT_SP, titleSize)
 
         summary = view.findViewById(android.R.id.summary)
         summary.setPadding(0, getDp(6), 0, getDp(7))
-        summary.setTextColor(ContextCompat.getColor(context, R.color.black_three_54))
+        summary.setTextColor(summaryColor)
         summary.setTextSize(TypedValue.COMPLEX_UNIT_SP, summarySize)
 
         val toggleButton = view.findViewById<LinearLayout>(android.R.id.widget_frame)

@@ -3,22 +3,62 @@
 
     <com.battleent.materialpreferences.MaterialPreferenceCategory
         android:title="Notification"
-        app:pref_category_background="@color/white_three"/>
-
-    <com.battleent.materialpreferences.MaterialPreference
-        android:defaultValue="true"
-        android:key="Notification"
-        android:title="알림 사용"
-        android:summary="이 항목은 알림 사용을 허가합니다." />
+        app:pref_category_background="@color/white_three"
+        app:pref_category_title_color="@color/colorPrimary"/>
 
     <com.battleent.materialpreferences.MaterialSwitchPreference
         android:defaultValue="true"
-        android:title="qwdqwdwd"
-        android:summary="sdsdsd"
-        android:key="asdsd"
+        android:key="Notification0"
+        android:title="Marketing"
+        android:summary="receive events, promotions like marketing messages."
+        app:pref_switch_title_color="@android:color/holo_blue_dark"
+        app:pref_switch_summary_color="@android:color/holo_blue_light"/>
+
+    <com.battleent.materialpreferences.MaterialSwitchPreference
+        android:defaultValue="true"
+        android:key="Notification1"
+        android:title="Snooze"
+        android:summary="do not receiving notifications at night."
+        app:pref_switch_title_color="@android:color/holo_green_dark"
+        app:pref_switch_summary_color="@android:color/holo_green_light"
         app:pref_switch_checked_thumb_color="@android:color/holo_blue_dark"
         app:pref_switch_checked_track_color="@android:color/holo_blue_light"
         app:pref_switch_unchecked_thumb_color="@android:color/holo_green_dark"
         app:pref_switch_unchecked_track_color="@android:color/holo_green_light"/>
+
+    <com.battleent.materialpreferences.MaterialPreference
+        android:defaultValue="true"
+        android:title="More"
+        android:summary="show more details"/>
+
+    <com.battleent.materialpreferences.MaterialPreferenceCategory
+        android:title="Category"
+        app:pref_category_background="@color/white_three"
+        app:pref_category_title_color="@color/md_deep_orange_700"/>
+
+    <com.battleent.materialpreferences.MaterialSwitchPreference
+        android:defaultValue="true"
+        android:key="Notification2"
+        android:title="Title"
+        android:summary="receive events, promotions like marketing messages."
+        app:pref_switch_title_color="@android:color/holo_blue_light"
+        app:pref_switch_summary_color="@android:color/white"
+        app:pref_switch_background="@color/background"
+        app:pref_switch_checked_thumb_color="@android:color/holo_blue_dark"
+        app:pref_switch_checked_track_color="@android:color/holo_blue_light"
+        app:pref_switch_unchecked_track_color="@color/white_three"/>
+
+    <com.battleent.materialpreferences.MaterialSwitchPreference
+        android:defaultValue="true"
+        android:key="Notification3"
+        android:title="Marketing"
+        android:summary="receive events, promotions like marketing messages."
+        app:pref_switch_title_color="@android:color/holo_blue_light"
+        app:pref_switch_summary_color="@android:color/white"
+        app:pref_switch_title_background="@color/background"
+        app:pref_switch_background="@color/background800"
+        app:pref_switch_checked_thumb_color="@android:color/holo_blue_dark"
+        app:pref_switch_checked_track_color="@android:color/holo_blue_light"
+        app:pref_switch_unchecked_track_color="@color/white_three"/>
 
 </PreferenceScreen>

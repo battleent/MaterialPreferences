@@ -96,10 +96,10 @@ class MaterialPreferenceCategory : PreferenceCategory {
 
     override fun onBindView(view: View) {
         super.onBindView(view)
+        view.setBackgroundColor(background)
         title = view.findViewById(android.R.id.title)
         title.setPadding(padding_left.toInt(), padding_top.toInt(), padding_right.toInt(), padding_bottom.toInt())
         title.setTextColor(titleColor)
-        title.setBackgroundColor(background)
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, titleSize)
         title.setTypeface(title.typeface, Typeface.BOLD)
 

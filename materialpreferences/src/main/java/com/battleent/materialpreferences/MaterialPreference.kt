@@ -103,6 +103,7 @@ class MaterialPreference : Preference {
 
     override fun onBindView(view: View) {
         super.onBindView(view)
+        view.setBackgroundColor(background)
         view.setPadding(0, 0, 0, 0)
         title = view.findViewById(android.R.id.title)
         title.setPadding(0, 0, 0, 0)
@@ -115,7 +116,6 @@ class MaterialPreference : Preference {
         summary.setTextSize(TypedValue.COMPLEX_UNIT_SP, summarySize)
 
         parent = title.parent as RelativeLayout
-        parent.setBackgroundColor(background)
         parent.setPadding(padding_left.toInt(), padding_top.toInt(), padding_right.toInt(), padding_bottom.toInt())
     }
 
