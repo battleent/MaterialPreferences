@@ -1,5 +1,5 @@
 # MaterialPreferences ![license](https://img.shields.io/badge/license-MIT%20License-blue.svg)
-:watermelon: An Android library that lets you implement customizing MaterialPreferences on Setting UI.<br><br>
+:watermelon: An Android library that lets you implement customizing MaterialPreferences on Setting UI by [Battle Entertainment](https://www.battleent.com/).<br><br>
 
 ![preview](https://user-images.githubusercontent.com/24237865/38911170-65e7a8ac-4308-11e8-9d84-2259a407ee57.gif)
 
