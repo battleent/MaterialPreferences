@@ -40,4 +40,17 @@
         <attr name="pref_switch_unchecked_thumb_color" format="color"/>
         <attr name="pref_switch_unchecked_track_color" format="color"/>
     </declare-styleable>
+    <declare-styleable name="MaterialCheckBoxPreference">
+        <attr name="pref_checkbox_title_color" format="color"/>
+        <attr name="pref_checkbox_title_size" format="dimension"/>
+        <attr name="pref_checkbox_title_background" format="color"/>
+        <attr name="pref_checkbox_summary_color" format="color"/>
+        <attr name="pref_checkbox_summary_size" format="dimension"/>
+        <attr name="pref_checkbox_summary_background" format="color"/>
+        <attr name="pref_checkbox_background" format="color"/>
+        <attr name="pref_checkbox_padding_left" format="dimension"/>
+        <attr name="pref_checkbox_padding_top" format="dimension"/>
+        <attr name="pref_checkbox_padding_right" format="dimension"/>
+        <attr name="pref_checkbox_padding_bottom" format="dimension"/>
+    </declare-styleable>
 </resources>

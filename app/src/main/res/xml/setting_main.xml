@@ -61,4 +61,10 @@
         app:pref_switch_checked_track_color="@android:color/holo_blue_light"
         app:pref_switch_unchecked_track_color="@color/white_three"/>
 
+    <com.battleent.materialpreferences.MaterialCheckBoxPreference
+        android:defaultValue="true"
+        android:key="Notification4"
+        android:title="Marketing"
+        android:summary="receive events, promotions like marketing messages."/>
+
 </PreferenceScreen>
