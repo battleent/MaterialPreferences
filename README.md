@@ -7,7 +7,7 @@
 #### build.gradle
 ```xml
 dependencies {
-  implementation "com.github.battleent:MaterialPreferences:0.2.0"
+  implementation "com.github.battleent:MaterialPreferences:0.3.0"
 }
 ```
 
@@ -89,6 +89,27 @@ Can be used just like using Preferences.
         app:pref_switch_checked_track_color="@android:color/holo_blue_light"
         app:pref_switch_unchecked_thumb_color="@android:color/holo_green_dark"
         app:pref_switch_unchecked_track_color="@android:color/holo_green_light"/>
+```
+
+### MaterialCheckBoxPreference
+```xml
+    <com.battleent.materialpreferences.MaterialCheckBoxPreference
+        android:defaultValue="true"
+        android:key="Notification4"
+        android:title="Marketing"
+        android:summary="receive events, promotions like marketing messages."
+        app:pref_checkbox_background="@color/background800"
+        app:pref_checkbox_title_color="@android:color/holo_blue_light"
+        app:pref_checkbox_title_background="@color/background"
+        app:pref_checkbox_summary_color="@android:color/white"/>
+```
+
+### MaterialProgressPreference
+```xml
+<com.battleent.materialpreferences.MaterialProgressPreference
+        android:title="Marketing"
+        android:summary="receive events, promotions like marketing messages."
+        app:pref_progress_visibility="true"/>
 ```
 
 # License
