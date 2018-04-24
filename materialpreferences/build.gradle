@@ -7,7 +7,7 @@ publish {
     userOrg = 'battleent'
     groupId = 'com.github.battleent'
     artifactId = 'MaterialPreferences'
-    publishVersion = '0.2.0'
+    publishVersion = '0.3.0'
     desc = 'This is an android preference xml menu library based on Material Design.'
     website = 'https://github.com/battleent/MaterialPreferences'
     issueTracker = "${website}/issues"
