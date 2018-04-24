@@ -68,30 +68,66 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
 
     private var mChecked = false
 
+    /**
+     * Construct a new SwitchPreference with default style options.
+     *
+     * @param context The Context that will style this preference
+     */
     constructor(context: Context): super(context) {
         onCreate()
     }
 
+    /**
+     * Construct a new SwitchPreference with the given style options.
+     *
+     * @param context The Context that will style this preference
+     * @param attrs Style attributes that differ from the default
+     */
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         onCreate()
         getAttrs(attrs)
     }
 
+    /**
+     * Construct a new SwitchPreference with the given style options.
+     *
+     * @param context The Context that will style this preference
+     * @param attrs Style attributes that differ from the default
+     * @param defStyleAttr An attribute in the current theme that contains a
+     *        reference to a style resource that supplies default values for
+     *        the view. Can be 0 to not look for defaults.
+     */
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         onCreate()
         getAttrs(attrs, defStyleAttr)
     }
 
+    /**
+     * Construct a new SwitchPreference with the given style options.
+     *
+     * @param attrs Style attributes that differ from the default
+     */
     private fun getAttrs(attrs: AttributeSet) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.MaterialSwitchPreference)
         setTypeArray(typedArray)
     }
 
+    /**
+     * Construct a new SwitchPreference with the given style options.
+     *
+     * @param attrs Style attributes that differ from the default
+     * @param defStyleAttr An attribute in the current theme that contains a
+     *        reference to a style resource that supplies default values for
+     *        the view. Can be 0 to not look for defaults.
+     */
     private fun getAttrs(attrs: AttributeSet, defStyleAttr: Int) {
         val typeArray = context.obtainStyledAttributes(attrs, R.styleable.MaterialSwitchPreference, defStyleAttr, 0)
         setTypeArray(typeArray)
     }
 
+    /**
+     * Set default Styleable values.
+     */
     private fun onCreate() {
         this.titleColor = ContextCompat.getColor(context, R.color.black_87)
         this.summaryColor = ContextCompat.getColor(context, R.color.black_three_54)
@@ -103,6 +139,23 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
         this.thumb_unchecked_color = ContextCompat.getColor(context, R.color.white_three)
     }
 
+    /**
+     * A {@link Preference} that provides a two-state toggleable option.
+     *
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_title_color
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_title_size
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_summary_color
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_background
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_width
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_padding_left
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_padding_top
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_padding_right
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_padding_bottom
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_checked_track_color
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_checked_thumb_color
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_unchecked_track_color
+     * @attr ref android.R.styleable#MaterialSwitchPreference_pref_switch_unchecked_thumb_color
+     */
     private fun setTypeArray(typeArray: TypedArray) {
         try {
             this.titleColor = typeArray.getColor(R.styleable.MaterialSwitchPreference_pref_switch_title_color, titleColor)
@@ -124,12 +177,22 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
         }
     }
 
+    /**
+     * Initialize widget Layout Resource with customized switch.
+     *
+     */
     override fun onCreateView(parent: ViewGroup): View {
         parent.setBackgroundColor(ContextCompat.getColor(context, R.color.white_two))
         widgetLayoutResource = R.layout.layout_switch
         return super.onCreateView(parent)
     }
 
+    /**
+     * Set initial value of switch is checked.
+     *
+     * <p>
+     * This preference will store a boolean into the SharedPreferences.
+     */
     override fun onSetInitialValue(restorePersistedValue: Boolean, defaultValue: Any?) {
         when(restorePersistedValue) {
             true -> {
@@ -140,6 +203,12 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
         }
     }
 
+    /**
+     * Set initial value of switch is checked.
+     *
+     * <p>
+     *     it initialize styleable data
+     */
     override fun onBindView(view: View) {
         super.onBindView(view)
         val customSwitch = view.findViewById<View>(R.id.custom_switch_item)
@@ -180,16 +249,31 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
         onChangeSwitchColor()
     }
 
+    /**
+     * Set default value
+     */
     override fun onGetDefaultValue(a: TypedArray, index: Int): Any {
         return a.getBoolean(index, false)
     }
 
     override fun onCheckedChanged(compoundButton: CompoundButton, isChecked: Boolean) {
+        // Listener didn't like it, change it back.
+        // CompoundButton will make sure we don't recurse.
         if (callChangeListener(isChecked)) {
             setChecked(isChecked)
         }
     }
 
+    /**
+     * GET returns isChecked switch.
+     */
+    override fun isChecked(): Boolean {
+        return mChecked
+    }
+
+    /**
+     * SET sets isChecked switch.
+     */
     override fun setChecked(checked: Boolean) {
         if (checked != mChecked) {
             mChecked = checked
@@ -204,6 +288,9 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
         }
     }
 
+    /**
+     * Actions for switching parameters.
+     */
     private fun onChangeSwitchColor() {
         switchView?.let{
             when(mChecked) {
@@ -219,15 +306,17 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
         }
     }
 
-    override fun isChecked(): Boolean {
-        return mChecked
-    }
-
+    /**
+     * Get DP value from PX.
+     */
     private fun getDp(size: Int): Int {
         val scale = context.resources.displayMetrics.density
         return (size * scale + 0.5f).toInt()
     }
 
+    /**
+     * Get onSaveInstanceState.
+     */
     override fun onSaveInstanceState(): Parcelable {
         val superState = super.onSaveInstanceState()
         if (isPersistent) {
@@ -239,6 +328,9 @@ class MaterialSwitchPreference : SwitchPreference, CompoundButton.OnCheckedChang
         return myState
     }
 
+    /**
+     * Get onRestoreInstanceState.
+     */
     override fun onRestoreInstanceState(state: Parcelable?) {
         if (state == null || state.javaClass != SavedState::class.java) {
             super.onRestoreInstanceState(state)
