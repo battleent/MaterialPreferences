@@ -53,4 +53,18 @@
         <attr name="pref_checkbox_padding_right" format="dimension"/>
         <attr name="pref_checkbox_padding_bottom" format="dimension"/>
     </declare-styleable>
+    <declare-styleable name="MaterialProgressPreference">
+        <attr name="pref_progress_title_color" format="color"/>
+        <attr name="pref_progress_title_size" format="dimension"/>
+        <attr name="pref_progress_title_background" format="color"/>
+        <attr name="pref_progress_summary_color" format="color"/>
+        <attr name="pref_progress_summary_size" format="dimension"/>
+        <attr name="pref_progress_summary_background" format="color"/>
+        <attr name="pref_progress_background" format="color"/>
+        <attr name="pref_progress_padding_left" format="dimension"/>
+        <attr name="pref_progress_padding_top" format="dimension"/>
+        <attr name="pref_progress_padding_right" format="dimension"/>
+        <attr name="pref_progress_padding_bottom" format="dimension"/>
+        <attr name="pref_progress_visibility" format="boolean"/>
+    </declare-styleable>
 </resources>
